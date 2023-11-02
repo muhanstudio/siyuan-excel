@@ -1,0 +1,31 @@
+{
+  "name": "siyuan-excel",
+  "author": "muhanstudio",
+  "url": "https://github.com/muhanstudio/siyuan-excel",
+  "version": "0.1.0",
+  "minAppVersion": "2.10.13",
+  "backends": [
+    "windows",
+    "linux",
+    "darwin"
+  ],
+  "frontends": [
+    "desktop",
+    "desktop-window"
+  ],
+  "displayName": {
+    "default": "Excel editor",
+    "zh_CN": "Excel 编辑器"
+  },
+  "description": {
+    "default": "A very comprehensive Excel editor",
+    "zh_CN": "一个功能非常全面的excel编辑器"
+  },
+  "readme": {
+    "default": "README.md",
+    "zh_CN": "README_zh_CN.md"
+  },
+  "keywords": [
+    "excel", "办公"
+  ]
+}
