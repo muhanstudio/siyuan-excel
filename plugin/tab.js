@@ -25,9 +25,28 @@ const showTab = async (pluginInstance, pageUrl) => {
 
     // 参考 https://github.com/zuoez02/siyuan-plugin-webview-flomo/blob/main/index.js#L380C20-L382C29
     fn.tabInstance.panelElement.innerHTML = `
-      <div style="display: flex" class="fn__flex-column fn__flex fn__flex-1 plugin-publisher__custom-tab">
-          <iframe allowfullscreen allowpopups style="border: none" class="fn__flex-column fn__flex  fn__flex-1" src="${url}"></iframe>
+      <div class="fn__flex-column">
+        <div class="protyle-breadcrumb">
+          <span class="protyle-breadcrumb__space"></span>
+          <button data-type="fullscreen" aria-label="${window.siyuan?.languages?.fullscreen}" class="block__icon fn__flex-center block__icon--show b3-tooltips b3-tooltips__sw">
+            <svg style="" data-id="" class=""><use xlink:href="#iconFullscreen"></use></svg>
+          </button>
+        </div>
+        <div class="protyle-preview">
+          <iframe class="fn__flex fn__flex-1" style="border: none;" src="${url}" allowfullscreen allowpopups ></iframe>
+        </div>
       </div>`
+
+    const breadcrumbElement = fn.tabInstance.panelElement.querySelector(".protyle-breadcrumb");
+    const tabBodyElement = breadcrumbElement?.parentElement;
+    const fullscreenElement = breadcrumbElement?.querySelector("button.block__icon[data-type=fullscreen]");
+    if (fullscreenElement) {
+      fullscreenElement.onclick = () => {
+        const flag_fullscreen = tabBodyElement.classList.contains("fullscreen");
+        tabBodyElement.classList.toggle("fullscreen", !flag_fullscreen);
+        fullscreenElement.classList.toggle("toolbar__item--active", !flag_fullscreen);
+      }
+    }
 }
 
 module.exports = {
