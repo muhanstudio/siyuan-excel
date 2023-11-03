@@ -15,11 +15,15 @@ async function doUpdatePlugin() {
     await copyFileToDir("plugin.json", siyuanPluginDir)
     await copyFileToDir("preview.png", siyuanPluginDir)
     await copyFileToDir("icon.png", siyuanPluginDir)
+    console.log("plugin files copied")
 }
 
-async function doServe() {
+async function doUpdateApp() {
+    console.log("start building app ...")
+    await executeVueCli("build")
+    console.log("app build finished")
     await copyDir("dist", joinPath(siyuanPluginDir, "dist"))
-    // await executeVueCli("serve")
+    console.log("app files copied")
 }
 
 // ==============================================
@@ -27,6 +31,6 @@ async function doServe() {
 (async () => {
     // console.log("vue app is serving on http://localhost:8080 ...")
     await doUpdatePlugin()
-    console.log("plugin updated.please open siyuan-note and click topbar😄")
-    await doServe()
+    await doUpdateApp()
+    console.log("updated success.please open siyuan-note and click topbar😄")
 })()
