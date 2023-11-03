@@ -16,7 +16,8 @@ export  async function exportSheetExcel(luckysheet,name) { // 参数为luckyshee
     // 4.写入 buffer
     const buffer = await workbook.xlsx.writeBuffer();
     // 5.保存为文件
-    saveFile(buffer,name);
+    const exportName = "导出" + Date.now().toString();
+    saveFile(buffer,exportName);
 }
  
 var saveFile = function(buf,name) {
