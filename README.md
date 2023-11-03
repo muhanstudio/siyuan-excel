@@ -4,6 +4,8 @@
 
 A very comprehensive Excel editor with import and export tables as well as professional level editing functions.
 
+![Demo](readmeimg/LuckysheetDemo.gif)
+
 # Thank you list
 
 From [terwer](https://github.com/terwer) help, successfully embedded in the SiYuan notes.
