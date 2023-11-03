@@ -1,6 +1,6 @@
 # siyuan-excel
 
-简体中文 \| [English](README_en_US.md)
+简体中文 \| [English](README.md)
 
 一个功能非常全面的excel编辑器，具有导入导出表格以及专业级别的编辑功能。
 
