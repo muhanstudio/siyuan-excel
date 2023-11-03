@@ -4,6 +4,8 @@
 
 一个功能非常全面的excel编辑器，具有导入导出表格以及专业级别的编辑功能。
 
+![Demo](readmeimg/LuckysheetDemo.gif)
+
 # 感谢
 
 来自t佬[terwer](https://github.com/terwer)的帮助，成功嵌入了思源
