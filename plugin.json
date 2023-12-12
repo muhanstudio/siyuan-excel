@@ -2,7 +2,7 @@
   "name": "siyuan-excel",
   "author": "muhanstudio",
   "url": "https://github.com/muhanstudio/siyuan-excel",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "minAppVersion": "2.10.13",
   "backends": [
     "windows",
